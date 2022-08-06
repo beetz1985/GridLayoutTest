@@ -50,6 +50,8 @@ body {
     width: 100%;
 }
 
+
+/**********Section One************/
 .section_1 {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
@@ -61,7 +63,6 @@ body {
         ". cta cta ."
     ;
 }
-
 
 .title {
     grid-area: title;
@@ -90,7 +91,7 @@ body {
 .word_graphic {
     color: var(--light-txt);
     font-size: 0.5em;
-    padding: 5px;
+    padding: 10px;
 }
 .word_graphic_01 {
     grid-area: word_01;
@@ -123,4 +124,85 @@ body {
     padding:14px 50px;
     border-radius: 30px;
     white-space: nowrap;
+}
+
+
+/************Section Two***************/
+
+
+@media all and (min-width:800px) {
+
+    .logo {
+        flex: 0 0 200px;
+    }
+
+    /*********Section One***********/
+
+    .section_1 {
+        padding: var(--gutter-padding) 0 0 0 ;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 28vh 25vh 14vh;
+        grid-template-areas: 
+            "hero hero title title"
+            "hero hero title title"
+            "hero hero cta ."
+            "hero hero word_01 word_02"
+        ;
+    }
+
+    .hero {
+        grid-area: hero;
+        width: 100%;
+        transform: none;
+        
+    }
+
+    .title, .cta, .word_graphic_01 {
+        padding: 0 0 0 var(--gutter-padding);
+    }
+
+    .title h1 {
+        font-size: calc(1.2em + 5vw);
+    }
+
+    .cta {
+        justify-content: flex-start;
+    }
+
+    .word_graphic_01 {
+        align-self: end;
+    }
+
+    .word_graphic_02 {
+        justify-content: flex-end;
+    }
+
+    .word_graphic_01 p {
+        position: static;
+        transform: none;
+        transform-origin: none;
+        width: unset;
+    }
+    .word_graphic_02 p {
+        position:absolute;
+        transform: translateY(10px) rotate(90deg);
+        transform-origin: top right;
+        width:80px;
+    }
+}
+
+@media all and (min-width:1400px) {
+
+
+
+    /***********Section One***********/
+    .section_1 {
+        max-width:1800px;
+        margin: 0 auto;
+    }
+
+    .title h1 {
+        font-size: 6em;
+        max-width: 700px;
+    }
 }
