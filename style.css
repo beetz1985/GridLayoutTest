@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     --dark-txt: #634B66;
 
     --gutter-padding: 26px;
+    --neg-gutter-padding: -26px;
 }
 
 html {
@@ -76,7 +77,8 @@ body {
 
 .hero {
     grid-area: hero;
-
+    width: calc(100% + var(--gutter-padding));
+    transform: translateX(var(--neg-gutter-padding));
 }
 
 .hero img {
