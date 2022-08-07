@@ -154,15 +154,17 @@ body {
     color: var(--secondary-colour);
     font-weight: 500;
     letter-spacing: -0.05em;
-    font-size: calc(1em + 5vw);
+    font-size: calc(1em + 4vw);
     padding: var(--gutter-padding) 0;
+    
 }
 
 .word_graphic_03 {
+    grid-area: word_03;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    grid-area: word_03;
+    
 }
 
 .word_graphic_03 p {
@@ -181,7 +183,7 @@ body {
 }
 
 .surf_image img {
-    width:auto;
+    max-width: 600px;
     max-height: 500px;
     opacity: 0.15;
 
@@ -275,6 +277,46 @@ body {
         transform-origin: top right;
         width:80px;
     }
+
+    /************Section Two***************/
+    .section_2 {
+        margin-top: 6vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        
+            "title_h2 title_h2 word_03"
+            "image step-one step-one"
+            "image step-two step-two"
+        ;
+    }
+
+    .title_02 h2 {
+        width: 70%;
+    }
+
+    .step_line {
+        width:100%;
+    }
+
+    .surf_image {
+        grid-area: image;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .surf_image {
+        width:30vw;
+        max-height: unset;
+    }
+
+    .surf_image img {
+        width: 100%;
+        max-height: unset;
+    }
 }
 
 @media all and (min-width:1400px) {
@@ -282,13 +324,20 @@ body {
 
 
     /***********Section One***********/
-    .section_1 {
-        max-width:1800px;
-        margin: 0 auto;
+    .section {
+        max-width:1500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .title h1 {
-        font-size: 6em;
+        font-size: 5em;
+        max-width: 600px;
+    }
+
+
+    .title_02 h2 {
+        font-size: 5em;
         max-width: 700px;
     }
 }
