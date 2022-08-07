@@ -128,7 +128,86 @@ body {
 
 
 /************Section Two***************/
+.section_2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    
+        "title_h2 word_03"
+        "step-one step-one"
+        "step-two step-two"
+    ;
 
+}
+
+.title_02 {
+    grid-area: title_h2;
+}
+
+.title_02 h2 {
+    color: var(--secondary-colour);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    font-size: calc(1em + 5vw);
+    padding: var(--gutter-padding) 0;
+}
+
+.word_graphic_03 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-area: word_03;
+}
+
+.word_graphic_03 p {
+    position: absolute;
+    transform: translateY(-10px) rotate(90deg);
+    transform-origin: top right;
+}
+
+.surf_image {
+    grid-column: 1 /span 2;
+    grid-row: 2 / span 2;
+
+    display: flex;
+    align-items: center;
+}
+
+.surf_image img {
+    width:100%;
+    opacity: 0.15;
+
+}
+
+.step {
+    padding: var(--gutter-padding);
+    padding-right: 0;
+}
+
+.step_01 {
+    grid-area: step-one;
+}
+
+.step_02 {
+    grid-area: step-two;
+}
+.step h3 {
+    padding-left: var(--gutter-padding);
+    color:var(--light-txt);
+    font-size: 1.8em;
+}
+
+.step_line {
+    margin: 10px 0;
+    width: calc(100% + var(--gutter-padding));
+    border-bottom: 4px solid var(--light-txt);
+}
+
+.step p {
+    color:var(--light-txt);
+    padding: var(--gutter-padding);
+}
 
 @media all and (min-width:800px) {
 
