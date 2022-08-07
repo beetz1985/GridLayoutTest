@@ -139,6 +139,11 @@ body {
         "step-two step-two"
     ;
 
+    /* background-image: url(assets/surf-dark.png);
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-size: 100%; */
+
 }
 
 .title_02 {
@@ -171,11 +176,13 @@ body {
     grid-row: 2 / span 2;
 
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .surf_image img {
-    width:100%;
+    width:auto;
+    max-height: 500px;
     opacity: 0.15;
 
 }
