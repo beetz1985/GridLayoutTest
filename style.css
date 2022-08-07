@@ -252,7 +252,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height:300px;
+    min-height:600px;
     background-image: url(assets/open_beach_op.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -302,6 +302,86 @@ body {
     border-radius: 30px;
 }
 
+/************Section 5*************/
+
+.section_5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto) 100px;
+    grid-template-areas: 
+        "title title title ."
+        "text text text ."
+        "fb tw in yt"
+    ;
+}
+
+.title_footer {
+    grid-area: title;
+}
+
+.footer_text {
+    grid-area: text;
+    align-self: center;
+}
+
+.footer_text p {
+    color:var(--light-txt);
+    padding: var(--gutter-padding) 0;
+    
+}
+
+.footer_step_line {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    align-self: flex-end;
+    width: 100%;
+    border-bottom: 4px solid var(--light-txt);
+    margin: 10px 0;
+}
+
+.icon {
+    justify-self: center;
+    align-self: flex-end;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--light-txt);
+    border-radius: 100%;
+    height: calc(40px + 5vw);
+    width: calc(40px + 5vw);
+}
+
+.icon img {
+    height:50%;
+    width:50%;
+}
+
+.icon_fb {
+    grid-area: fb;
+}
+
+.icon_tw {
+    grid-area: tw;
+}
+
+.icon_in {
+    grid-area: in;
+}
+
+.icon_yt {
+    grid-area: yt;
+}
+
+.title_footer h4 {
+    color: var(--secondary-colour);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    font-size: calc(0.8em + 4vw);
+    padding: var(--gutter-padding) 0;
+}
+
+
 @media all and (min-width:800px) {
 
     .logo {
@@ -335,6 +415,10 @@ body {
 
     .title h1 {
         font-size: calc(1.2em + 5vw);
+    }
+
+    .title_footer h4 {
+        font-size: calc(0.8em + 4vw);
     }
 
     .cta {
@@ -380,6 +464,8 @@ body {
         width: 70%;
     }
 
+    
+
     .step_line {
         width:100%;
     }
@@ -400,6 +486,42 @@ body {
     .surf_image img {
         width: 100%;
         max-height: unset;
+    }
+
+    /*************Section 4****************/
+
+    .newsletter-form-container form span {
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+    }
+    
+    /* align-items: center;
+    max-width: 260px; */
+
+    /************Section 5**************/
+    .section_5 {
+        display: grid;
+        grid-template-columns: 3fr repeat(5, 1fr);
+        grid-template-rows: auto 100px;
+        grid-template-areas: 
+            "title . text text . ."
+            ". . fb tw in yt"
+        ;
+    }
+
+    .footer_step_line {
+        grid-column: 2 / -1;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+        width: 100%;
+        border-bottom: 4px solid var(--light-txt);
+        margin: 10px 0;
+    }
+
+    .icon {
+        height: 70px;
+        width: 70px;
     }
 }
 
@@ -433,8 +555,14 @@ body {
 
     /****************Section 4****************/
     .newsletter-form-container form .text_input,
-    .newsletter-form-container form .checkbox_label{
+    .newsletter-form-container form .checkbox_label {
       
         width:300px;
+    }
+
+    /*******Section 5**********/
+
+    .title_footer h4 {
+        font-size: 3em;
     }
 }
