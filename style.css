@@ -35,9 +35,7 @@ body {
     background-color: var(--primary-colour);
 }
 
-.wrapper {
 
-}
 
 .sub_wrapper_01, .sub_wrapper_03 {
     padding:var(--gutter-padding);
